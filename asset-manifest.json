@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gif-app/static/css/main.b2fdabdc.css",
+    "main.js": "/gif-app/static/js/main.118ed32b.js",
+    "index.html": "/gif-app/index.html",
+    "main.b2fdabdc.css.map": "/gif-app/static/css/main.b2fdabdc.css.map",
+    "main.118ed32b.js.map": "/gif-app/static/js/main.118ed32b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2fdabdc.css",
+    "static/js/main.118ed32b.js"
+  ]
+}
