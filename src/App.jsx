@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './sass/main.scss'
+
 import {AddCategory, GifGrid} from './components'
 
 function App() {
@@ -9,19 +9,10 @@ function App() {
 		'Dragon Ball Z',
 	])
 
-	// const handleAdd = (newCategory) =>{
-	// 	setCategories([...categories, "HunterXHunter"])
-	// }
 
 	const onAddCategory = newCategory => {
-		// categories.push(newCategory)
-		// console.log(categories)
 
-		const findCategory = categories.find(
-			category => category.toLowerCase() === newCategory.toLowerCase()
-		)
-
-		if (findCategory) {
+		if (categories.includes(newCategory)) {
 			alert('Category already exists')
 			return
 		}

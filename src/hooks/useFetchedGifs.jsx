@@ -1,9 +1,8 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs";
 
 
-export default function useFetchedGifs(category) {
+export function useFetchedGifs(category) {
     const [gifs, setGifs] = useState([])
     const [loading, setLoading] = useState(true)
 

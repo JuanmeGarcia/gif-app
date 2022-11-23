@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite of <GifGrid /> should show items when images are load by custom hook 1`] = `
+<div>
+  <h3>
+    One Punch
+  </h3>
+  <section
+    class="gif-grid"
+  >
+    <div
+      class="card"
+    >
+      <img
+        alt="saitama"
+        class="gif"
+        data-testid="gif-image"
+        src="https://localhost/saitama.jpg"
+      />
+      <p
+        data-testid="gif-title"
+      >
+        saitama
+      </p>
+    </div>
+    <div
+      class="card"
+    >
+      <img
+        alt="goku"
+        class="gif"
+        data-testid="gif-image"
+        src="https://localhost/goku.jpg"
+      />
+      <p
+        data-testid="gif-title"
+      >
+        goku
+      </p>
+    </div>
+  </section>
+</div>
+`;

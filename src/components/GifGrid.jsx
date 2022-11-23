@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { getGifs } from '../helpers/getGifs'
-import useFetchedGifs from '../hooks/useFetchedGifs'
-import {GifItem} from './GifItem'
+import { useFetchedGifs } from '../hooks/useFetchedGifs'
+import { GifItem } from './GifItem'
+import { PropTypes } from 'prop-types'
 
 function GifGrid({ category }) {
 	const { gifs, loading } = useFetchedGifs(category)
 
 	const listImages = gifs.map((img, i) => {
 		return (
-			<GifItem key={i} img={img} /> //mala practica poner key={i}
+			<GifItem 
+				key={i}
+				title={img.title}
+				url={img.url}
+			/> //mala practica poner key={i}
 		)
 	})
 
@@ -19,6 +22,10 @@ function GifGrid({ category }) {
 			<section className="gif-grid">{listImages}</section>
 		</>
 	)
+}
+
+GifGrid.propTypes = {
+	category: PropTypes.string.isRequired
 }
 
 export { GifGrid }

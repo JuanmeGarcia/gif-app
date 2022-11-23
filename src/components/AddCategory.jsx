@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import {Button} from './Button'
+import PropTypes from 'prop-types'
 
 function AddCategory({ onAddCategory }) {
 	const [text, setText] = useState('')
@@ -12,7 +13,6 @@ function AddCategory({ onAddCategory }) {
 	const handleSubmit = e => {
         e.preventDefault()
         const inputValue = text.trim()
-        console.log(`submit hecho`);
         if(inputValue.length > 2) {
             onAddCategory(inputValue)
             setText('')
@@ -27,6 +27,7 @@ function AddCategory({ onAddCategory }) {
 		<form 
             action="" 
             onSubmit={handleSubmit}
+            aria-label="form"
         >
 			<input 
                 type="text" 
@@ -38,5 +39,10 @@ function AddCategory({ onAddCategory }) {
 		</form>
 	)
 }
+AddCategory.propTypes = {
+    onAddCategory: PropTypes.func.isRequired
+}
+
 
 export { AddCategory }
+
